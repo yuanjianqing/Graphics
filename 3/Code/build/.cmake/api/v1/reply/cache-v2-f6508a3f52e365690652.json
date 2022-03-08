@@ -1267,7 +1267,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[C:/Environment/opencv/sources/build][v4.5.5()]"
+			"value" : "[C:/Environment/opencv/build/x64/mingw][v4.5.5()]"
 		},
 		{
 			"name" : "OpenCV_DIR",
@@ -1279,7 +1279,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Environment/opencv/sources/build"
+			"value" : "C:/Environment/opencv/build/x64/mingw"
 		},
 		{
 			"name" : "Rasterizer_BINARY_DIR",
