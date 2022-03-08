@@ -1,0 +1,3 @@
+C:/Users/123/Documents/graphics/homework/2/normal/build/CMakeFiles/Rasterizer.dir
+C:/Users/123/Documents/graphics/homework/2/normal/build/CMakeFiles/edit_cache.dir
+C:/Users/123/Documents/graphics/homework/2/normal/build/CMakeFiles/rebuild_cache.dir

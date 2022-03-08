@@ -1,0 +1,7 @@
+# ninja log v5
+0	1655	1646307813	CMakeFiles/Rasterizer.dir/Triangle.cpp.o	5e76c5c2f0943608
+0	3180	1646307815	CMakeFiles/Rasterizer.dir/main.cpp.o	17d7dc8bfd4e2068
+0	3657	1646307815	CMakeFiles/Rasterizer.dir/rasterizer.cpp.o	b99ab1fff5a70941
+3657	4203	1646307816	Rasterizer	2ad18dd80af39ae9
+6	3366	1646307934	CMakeFiles/Rasterizer.dir/rasterizer.cpp.o	b99ab1fff5a70941
+3366	4161	1646307935	Rasterizer	2ad18dd80af39ae9

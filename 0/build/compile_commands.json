@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/code/graphics/Graphics/pa0/build",
+  "command": "C:\\Environment\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/Transformation.dir/includes_CXX.rsp -O3 -DNDEBUG -o CMakeFiles\\Transformation.dir\\main.cpp.obj -c C:\\code\\graphics\\Graphics\\pa0\\main.cpp",
+  "file": "C:/code/graphics/Graphics/pa0/main.cpp"
+}
+]
