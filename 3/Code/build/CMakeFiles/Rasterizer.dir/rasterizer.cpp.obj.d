@@ -1,5 +1,5 @@
 CMakeFiles/Rasterizer.dir/rasterizer.cpp.obj: \
- C:\code\graphics\Graphics\3\Code\rasterizer.cpp \
+ C:\code\Graphics\3\Code\rasterizer.cpp \
  C:/Environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/algorithm \
  C:/Environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/utility \
  C:/Environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -60,7 +60,7 @@ CMakeFiles/Rasterizer.dir/rasterizer.cpp.obj: \
  C:/Environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/memoryfwd.h \
  C:/Environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/uniform_int_dist.h \
  C:/Environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/limits \
- C:\code\graphics\Graphics\3\Code\rasterizer.hpp \
+ C:\code\Graphics\3\Code\rasterizer.hpp \
  C:/PROGRA~2/Eigen3/include/eigen3/Eigen/Eigen \
  C:/PROGRA~2/Eigen3/include/eigen3/Eigen/Dense \
  C:/PROGRA~2/Eigen3/include/eigen3/Eigen/Core \
@@ -464,11 +464,10 @@ CMakeFiles/Rasterizer.dir/rasterizer.cpp.obj: \
  C:/Environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_list.h \
  C:/Environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocated_ptr.h \
  C:/Environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/list.tcc \
- C:\code\graphics\Graphics\3\Code\global.hpp \
- C:\code\graphics\Graphics\3\Code\Shader.hpp \
- C:\code\graphics\Graphics\3\Code\Texture.hpp \
+ C:\code\Graphics\3\Code\global.hpp C:\code\Graphics\3\Code\Shader.hpp \
+ C:\code\Graphics\3\Code\Texture.hpp \
  C:/Environment/opencv/sources/include/opencv2/opencv.hpp \
- C:/Environment/opencv/build/x64/mingw/opencv2/opencv_modules.hpp \
+ C:/Environment/opencv/sources/build/opencv2/opencv_modules.hpp \
  C:/Environment/opencv/sources/modules/core/include/opencv2/core.hpp \
  C:/Environment/opencv/sources/modules/core/include/opencv2/core/cvdef.h \
  C:/Environment/opencv/sources/modules/core/include/opencv2/core/version.hpp \
@@ -618,4 +617,4 @@ CMakeFiles/Rasterizer.dir/rasterizer.cpp.obj: \
  C:/Environment/opencv/sources/modules/video/include/opencv2/video.hpp \
  C:/Environment/opencv/sources/modules/video/include/opencv2/video/tracking.hpp \
  C:/Environment/opencv/sources/modules/video/include/opencv2/video/background_segm.hpp \
- C:\code\graphics\Graphics\3\Code\Triangle.hpp
+ C:\code\Graphics\3\Code\Triangle.hpp

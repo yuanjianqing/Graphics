@@ -113,6 +113,7 @@ Eigen::Vector3f texture_fragment_shader(const fragment_shader_payload& payload)
     if (payload.texture)
     {
         // TODO: Get the texture value at the texture coordinates of the current fragment
+        return_color = payload.texture->getColor(payload.tex_coords.x(), payload.tex_coords.y()) / 255;
 
     }
     Eigen::Vector3f texture_color;
@@ -137,12 +138,21 @@ Eigen::Vector3f texture_fragment_shader(const fragment_shader_payload& payload)
 
     Eigen::Vector3f result_color = {0, 0, 0};
 
+    Eigen::Vector3f world2Light;  //在后面的for循环中使用
+    Eigen::Vector3f world2Carema = eye_pos - point;
+
     for (auto& light : lights)
     {
         // TODO: For each light source in the code, calculate what the *ambient*, *diffuse*, and *specular* 
         // components are. Then, accumulate that result on the *result_color* object.
-
+        world2Light = light.position - point;
+        result_color += texture_color.cwiseProduct(light.intensity / world2Light.dot(world2Light)) * MAX(0, normal.dot(world2Light.normalized()));
+        
+        //specular
+        Eigen::Vector3f h = (world2Carema.normalized() + world2Light.normalized()).normalized();
+        result_color += ks.cwiseProduct((light.intensity / world2Light.dot(world2Light)) * pow(MAX(0, normal.dot(h)), p));
     }
+    result_color += ka.cwiseProduct( amb_light_intensity );
 
     return result_color * 255.f;
 }
@@ -165,24 +175,25 @@ Eigen::Vector3f phong_fragment_shader(const fragment_shader_payload& payload)
     Eigen::Vector3f color = payload.color;
     Eigen::Vector3f point = payload.view_pos;
     Eigen::Vector3f normal = payload.normal;
-    Eigen::Vector3f result_color = {0, 0, 0};
 
-    Eigen::Vector3f world2View = (eye_pos - point).normalized();
-    Eigen::Vector3f world2Light;
+    Eigen::Vector3f result_color = {0, 0, 0};
+    
+    Eigen::Vector3f world2Light;  //在后面的for循环中使用
+    Eigen::Vector3f world2Carema = eye_pos - point;
+
     for (auto& light : lights)
     {
         // TODO: For each light source in the code, calculate what the *ambient*, *diffuse*, and *specular* 
         // components are. Then, accumulate that result on the *result_color* object.
-
-        world2Light = (light.position - point).normalized();
-        //diffuse
-        result_color += color * (light.intensity / (light.position - point).squaredNorm()) * MAX(0, world2Light.dot(normal));  
-       
+        // diffuse
+        world2Light = light.position - point;
+        result_color += color.cwiseProduct(light.intensity / world2Light.dot(world2Light)) * MAX(0, normal.dot(world2Light.normalized()));
+        
         //specular
-        result_color += color * (light.intensity / (light.position - point).squaredNorm()) * MAX(0, normal.dot((world2Light + world2View).normalized()));
+        Eigen::Vector3f h = (world2Carema.normalized() + world2Light.normalized()).normalized();
+        result_color += (light.intensity / world2Light.dot(world2Light)) * pow(MAX(0, normal.dot(h)), 80);
     }
-    result_color += amb_light_intensity;
-
+    result_color += amb_light_intensity / 255;
     return result_color * 255.f;
 }
 
@@ -306,10 +317,13 @@ int main(int argc, const char** argv)
 
     rst::rasterizer r(700, 700);
 
-    auto texture_path = "hmap.jpg";
+    //auto texture_path = "hmap.jpg";
+    auto texture_path = "spot_texture.png" ;
     r.set_texture(Texture(obj_path + texture_path));
 
-    std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = phong_fragment_shader;
+    //std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = phong_fragment_shader;
+    //std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = normal_fragment_shader;
+    std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = texture_fragment_shader;
 
     if (argc >= 2)
     {
@@ -358,7 +372,7 @@ int main(int argc, const char** argv)
         r.clear(rst::Buffers::Color | rst::Buffers::Depth);
         r.set_model(get_model_matrix(angle));
         r.set_view(get_view_matrix(eye_pos));
-        r.set_projection(get_projection_matrix(45.0, 1, 0.1, 50));
+        r.set_projection(get_projection_matrix(45.0, 1, -0.1, -50));
 
         r.draw(TriangleList);
         cv::Mat image(700, 700, CV_32FC3, r.frame_buffer().data());
@@ -376,7 +390,7 @@ int main(int argc, const char** argv)
 
         r.set_model(get_model_matrix(angle));
         r.set_view(get_view_matrix(eye_pos));
-        r.set_projection(get_projection_matrix(45.0, 1, 0.1, 50));
+        r.set_projection(get_projection_matrix(45.0, 1, -0.1, -50));
 
         //r.draw(pos_id, ind_id, col_id, rst::Primitive::Triangle);
         r.draw(TriangleList);
@@ -390,11 +404,11 @@ int main(int argc, const char** argv)
 
         if (key == 'a' )
         {
-            angle -= 0.1;
+            angle -= 10;
         }
         else if (key == 'd')
         {
-            angle += 0.1;
+            angle += 10;
         }
 
     }

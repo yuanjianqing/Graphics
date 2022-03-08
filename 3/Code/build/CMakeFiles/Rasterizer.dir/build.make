@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\code\graphics\Graphics\3\Code
+CMAKE_SOURCE_DIR = C:\code\Graphics\3\Code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\code\graphics\Graphics\3\Code\build
+CMAKE_BINARY_DIR = C:\code\Graphics\3\Code\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Rasterizer.dir/depend.make
@@ -72,61 +72,61 @@ CMakeFiles/Rasterizer.dir/main.cpp.obj: CMakeFiles/Rasterizer.dir/flags.make
 CMakeFiles/Rasterizer.dir/main.cpp.obj: CMakeFiles/Rasterizer.dir/includes_CXX.rsp
 CMakeFiles/Rasterizer.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/Rasterizer.dir/main.cpp.obj: CMakeFiles/Rasterizer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\code\graphics\Graphics\3\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Rasterizer.dir/main.cpp.obj"
-	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rasterizer.dir/main.cpp.obj -MF CMakeFiles\Rasterizer.dir\main.cpp.obj.d -o CMakeFiles\Rasterizer.dir\main.cpp.obj -c C:\code\graphics\Graphics\3\Code\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\code\Graphics\3\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Rasterizer.dir/main.cpp.obj"
+	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rasterizer.dir/main.cpp.obj -MF CMakeFiles\Rasterizer.dir\main.cpp.obj.d -o CMakeFiles\Rasterizer.dir\main.cpp.obj -c C:\code\Graphics\3\Code\main.cpp
 
 CMakeFiles/Rasterizer.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rasterizer.dir/main.cpp.i"
-	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\code\graphics\Graphics\3\Code\main.cpp > CMakeFiles\Rasterizer.dir\main.cpp.i
+	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\code\Graphics\3\Code\main.cpp > CMakeFiles\Rasterizer.dir\main.cpp.i
 
 CMakeFiles/Rasterizer.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rasterizer.dir/main.cpp.s"
-	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\code\graphics\Graphics\3\Code\main.cpp -o CMakeFiles\Rasterizer.dir\main.cpp.s
+	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\code\Graphics\3\Code\main.cpp -o CMakeFiles\Rasterizer.dir\main.cpp.s
 
 CMakeFiles/Rasterizer.dir/rasterizer.cpp.obj: CMakeFiles/Rasterizer.dir/flags.make
 CMakeFiles/Rasterizer.dir/rasterizer.cpp.obj: CMakeFiles/Rasterizer.dir/includes_CXX.rsp
 CMakeFiles/Rasterizer.dir/rasterizer.cpp.obj: ../rasterizer.cpp
 CMakeFiles/Rasterizer.dir/rasterizer.cpp.obj: CMakeFiles/Rasterizer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\code\graphics\Graphics\3\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Rasterizer.dir/rasterizer.cpp.obj"
-	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rasterizer.dir/rasterizer.cpp.obj -MF CMakeFiles\Rasterizer.dir\rasterizer.cpp.obj.d -o CMakeFiles\Rasterizer.dir\rasterizer.cpp.obj -c C:\code\graphics\Graphics\3\Code\rasterizer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\code\Graphics\3\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Rasterizer.dir/rasterizer.cpp.obj"
+	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rasterizer.dir/rasterizer.cpp.obj -MF CMakeFiles\Rasterizer.dir\rasterizer.cpp.obj.d -o CMakeFiles\Rasterizer.dir\rasterizer.cpp.obj -c C:\code\Graphics\3\Code\rasterizer.cpp
 
 CMakeFiles/Rasterizer.dir/rasterizer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rasterizer.dir/rasterizer.cpp.i"
-	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\code\graphics\Graphics\3\Code\rasterizer.cpp > CMakeFiles\Rasterizer.dir\rasterizer.cpp.i
+	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\code\Graphics\3\Code\rasterizer.cpp > CMakeFiles\Rasterizer.dir\rasterizer.cpp.i
 
 CMakeFiles/Rasterizer.dir/rasterizer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rasterizer.dir/rasterizer.cpp.s"
-	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\code\graphics\Graphics\3\Code\rasterizer.cpp -o CMakeFiles\Rasterizer.dir\rasterizer.cpp.s
+	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\code\Graphics\3\Code\rasterizer.cpp -o CMakeFiles\Rasterizer.dir\rasterizer.cpp.s
 
 CMakeFiles/Rasterizer.dir/Triangle.cpp.obj: CMakeFiles/Rasterizer.dir/flags.make
 CMakeFiles/Rasterizer.dir/Triangle.cpp.obj: CMakeFiles/Rasterizer.dir/includes_CXX.rsp
 CMakeFiles/Rasterizer.dir/Triangle.cpp.obj: ../Triangle.cpp
 CMakeFiles/Rasterizer.dir/Triangle.cpp.obj: CMakeFiles/Rasterizer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\code\graphics\Graphics\3\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Rasterizer.dir/Triangle.cpp.obj"
-	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rasterizer.dir/Triangle.cpp.obj -MF CMakeFiles\Rasterizer.dir\Triangle.cpp.obj.d -o CMakeFiles\Rasterizer.dir\Triangle.cpp.obj -c C:\code\graphics\Graphics\3\Code\Triangle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\code\Graphics\3\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Rasterizer.dir/Triangle.cpp.obj"
+	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rasterizer.dir/Triangle.cpp.obj -MF CMakeFiles\Rasterizer.dir\Triangle.cpp.obj.d -o CMakeFiles\Rasterizer.dir\Triangle.cpp.obj -c C:\code\Graphics\3\Code\Triangle.cpp
 
 CMakeFiles/Rasterizer.dir/Triangle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rasterizer.dir/Triangle.cpp.i"
-	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\code\graphics\Graphics\3\Code\Triangle.cpp > CMakeFiles\Rasterizer.dir\Triangle.cpp.i
+	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\code\Graphics\3\Code\Triangle.cpp > CMakeFiles\Rasterizer.dir\Triangle.cpp.i
 
 CMakeFiles/Rasterizer.dir/Triangle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rasterizer.dir/Triangle.cpp.s"
-	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\code\graphics\Graphics\3\Code\Triangle.cpp -o CMakeFiles\Rasterizer.dir\Triangle.cpp.s
+	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\code\Graphics\3\Code\Triangle.cpp -o CMakeFiles\Rasterizer.dir\Triangle.cpp.s
 
 CMakeFiles/Rasterizer.dir/Texture.cpp.obj: CMakeFiles/Rasterizer.dir/flags.make
 CMakeFiles/Rasterizer.dir/Texture.cpp.obj: CMakeFiles/Rasterizer.dir/includes_CXX.rsp
 CMakeFiles/Rasterizer.dir/Texture.cpp.obj: ../Texture.cpp
 CMakeFiles/Rasterizer.dir/Texture.cpp.obj: CMakeFiles/Rasterizer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\code\graphics\Graphics\3\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Rasterizer.dir/Texture.cpp.obj"
-	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rasterizer.dir/Texture.cpp.obj -MF CMakeFiles\Rasterizer.dir\Texture.cpp.obj.d -o CMakeFiles\Rasterizer.dir\Texture.cpp.obj -c C:\code\graphics\Graphics\3\Code\Texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\code\Graphics\3\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Rasterizer.dir/Texture.cpp.obj"
+	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Rasterizer.dir/Texture.cpp.obj -MF CMakeFiles\Rasterizer.dir\Texture.cpp.obj.d -o CMakeFiles\Rasterizer.dir\Texture.cpp.obj -c C:\code\Graphics\3\Code\Texture.cpp
 
 CMakeFiles/Rasterizer.dir/Texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Rasterizer.dir/Texture.cpp.i"
-	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\code\graphics\Graphics\3\Code\Texture.cpp > CMakeFiles\Rasterizer.dir\Texture.cpp.i
+	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\code\Graphics\3\Code\Texture.cpp > CMakeFiles\Rasterizer.dir\Texture.cpp.i
 
 CMakeFiles/Rasterizer.dir/Texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Rasterizer.dir/Texture.cpp.s"
-	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\code\graphics\Graphics\3\Code\Texture.cpp -o CMakeFiles\Rasterizer.dir\Texture.cpp.s
+	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\code\Graphics\3\Code\Texture.cpp -o CMakeFiles\Rasterizer.dir\Texture.cpp.s
 
 # Object files for target Rasterizer
 Rasterizer_OBJECTS = \
@@ -143,25 +143,25 @@ Rasterizer.exe: CMakeFiles/Rasterizer.dir/rasterizer.cpp.obj
 Rasterizer.exe: CMakeFiles/Rasterizer.dir/Triangle.cpp.obj
 Rasterizer.exe: CMakeFiles/Rasterizer.dir/Texture.cpp.obj
 Rasterizer.exe: CMakeFiles/Rasterizer.dir/build.make
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_gapi455.dll.a
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_highgui455.dll.a
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_ml455.dll.a
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_objdetect455.dll.a
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_photo455.dll.a
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_stitching455.dll.a
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_video455.dll.a
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_videoio455.dll.a
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_imgcodecs455.dll.a
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_dnn455.dll.a
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_calib3d455.dll.a
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_features2d455.dll.a
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_flann455.dll.a
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_imgproc455.dll.a
-Rasterizer.exe: C:/Environment/opencv/build/x64/mingw/lib/libopencv_core455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_gapi455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_highgui455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_ml455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_objdetect455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_photo455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_stitching455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_video455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_videoio455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_imgcodecs455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_dnn455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_calib3d455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_features2d455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_flann455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_imgproc455.dll.a
+Rasterizer.exe: C:/Environment/opencv/sources/build/lib/libopencv_core455.dll.a
 Rasterizer.exe: CMakeFiles/Rasterizer.dir/linklibs.rsp
 Rasterizer.exe: CMakeFiles/Rasterizer.dir/objects1.rsp
 Rasterizer.exe: CMakeFiles/Rasterizer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\code\graphics\Graphics\3\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Rasterizer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\code\Graphics\3\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Rasterizer.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Rasterizer.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -173,6 +173,6 @@ CMakeFiles/Rasterizer.dir/clean:
 .PHONY : CMakeFiles/Rasterizer.dir/clean
 
 CMakeFiles/Rasterizer.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\code\graphics\Graphics\3\Code C:\code\graphics\Graphics\3\Code C:\code\graphics\Graphics\3\Code\build C:\code\graphics\Graphics\3\Code\build C:\code\graphics\Graphics\3\Code\build\CMakeFiles\Rasterizer.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\code\Graphics\3\Code C:\code\Graphics\3\Code C:\code\Graphics\3\Code\build C:\code\Graphics\3\Code\build C:\code\Graphics\3\Code\build\CMakeFiles\Rasterizer.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Rasterizer.dir/depend
 
