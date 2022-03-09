@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/code/graphics/Graphics/pa0/main.cpp" "CMakeFiles/Transformation.dir/main.cpp.obj" "gcc" "CMakeFiles/Transformation.dir/main.cpp.obj.d"
+  "C:/code/Graphics/0/main.cpp" "CMakeFiles/Transformation.dir/main.cpp.obj" "gcc" "CMakeFiles/Transformation.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.

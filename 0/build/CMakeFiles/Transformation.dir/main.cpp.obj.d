@@ -1,5 +1,4 @@
-CMakeFiles/Transformation.dir/main.cpp.obj: \
- C:\code\graphics\Graphics\pa0\main.cpp \
+CMakeFiles/Transformation.dir/main.cpp.obj: C:\code\Graphics\0\main.cpp \
  C:/Environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath \
  C:/Environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/Environment/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \

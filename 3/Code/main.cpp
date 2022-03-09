@@ -384,16 +384,16 @@ int main(int argc, const char** argv)
 
     rst::rasterizer r(700, 700);
     //法线贴图
-    auto texture_path = "hmap.jpg";
+    //auto texture_path = "hmap.jpg";
     //贴图
-    //auto texture_path = "spot_texture.png" ;
+    auto texture_path = "spot_texture.png" ;
     r.set_texture(Texture(obj_path + texture_path));
 
     //std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = phong_fragment_shader;
     //std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = normal_fragment_shader;
-    //std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = texture_fragment_shader;
+    std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = texture_fragment_shader;
     //std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = bump_fragment_shader;
-    std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = displacement_fragment_shader;
+    //std::function<Eigen::Vector3f(fragment_shader_payload)> active_shader = displacement_fragment_shader;
 
 
     if (argc >= 2)

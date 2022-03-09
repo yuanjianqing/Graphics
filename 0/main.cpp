@@ -1,11 +1,11 @@
 #include<cmath>
-#include<eigen3/Eigen/Core>
-#include<eigen3/Eigen/Dense>
+//#include<eigen3/Eigen/Core>
+//#include<eigen3/Eigen/Dense>
 #include<iostream>
 
 int main(){
 
-    // Basic Example of cpp
+    /*// Basic Example of cpp
     std::cout << "Example of cpp \n";
     float a = 1.0, b = 2.0;
     std::cout << a << std::endl;
@@ -51,7 +51,10 @@ int main(){
     // matrix add i + j
     // matrix scalar multiply i * 2.0
     // matrix multiply i * j
-    // matrix multiply vector i * v
+    // matrix multiply vector i * v*/
+
+    float m= 2.3;
+    std::cout << std::ceil(m);
 
     return 0;
 }
