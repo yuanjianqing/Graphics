@@ -53,7 +53,7 @@ public:
 		if (u > 1) u = 1;
 		if (v < 0) v = 0;
 		if (v > 1) v = 1;
-        auto u_img = u * width/2;
+        auto u_img = u * width;
         auto v_img = (1.0 - v) * height;
 
         //u_img -= 0.5;
