@@ -58,9 +58,10 @@ void bezier(const std::vector<cv::Point2f> &control_points, cv::Mat &window)
         curl_point[capaticity] = recursive_bezier(control_points, t);
         capaticity += 1;
     }
+    std::cout << capaticity << "/n" ;
     for(int i = 0; i < capaticity; i++)
     {
-        window.at<cv::Vec3b>(curl_point[i]) = (255, 0, 0);
+        window.at<cv::Vec3b>(curl_point[i]) = (255, 255, 255);
     }
 }
 
