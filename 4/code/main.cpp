@@ -60,7 +60,9 @@ void drawLine(cv::Point2f first, cv::Point2f second, cv::Mat window)
     while(dist > 0)
     {
         point = first + (second - first) * (dist / Distance);
-        window.at<cv::Vec3b>(point) = (255, 255, 255);
+        window.at<cv::Vec3b>(point)[1] = 255;
+        window.at<cv::Vec3b>(point)[2] = 255;
+        window.at<cv::Vec3b>(point)[3] = 255;
         dist -= 0.001;
     }
 }
