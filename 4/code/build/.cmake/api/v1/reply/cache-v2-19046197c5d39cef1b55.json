@@ -2,6 +2,42 @@
 	"entries" : 
 	[
 		{
+			"name" : "BezierCurve_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/code/Graphics/4/code/build"
+		},
+		{
+			"name" : "BezierCurve_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "BezierCurve_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/code/Graphics/4/code"
+		},
+		{
 			"name" : "CMAKE_ADDR2LINE",
 			"properties" : 
 			[
@@ -55,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/code/Graphics/3/Code/build"
+			"value" : "c:/code/Graphics/4/code/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -647,7 +683,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/code/Graphics/3/Code"
+			"value" : "C:/code/Graphics/4/code"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -659,7 +695,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/Rasterizer"
+			"value" : "C:/Program Files (x86)/BezierCurve"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -879,7 +915,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Rasterizer"
+			"value" : "BezierCurve"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1267,7 +1303,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[C:/Environment/opencv/sources/build][v4.5.5()]"
+			"value" : "[C:/Environment/opencv/build/x64/mingw][v4.5.5()]"
 		},
 		{
 			"name" : "OpenCV_DIR",
@@ -1279,43 +1315,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Environment/opencv/sources/build"
-		},
-		{
-			"name" : "Rasterizer_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "C:/code/Graphics/3/Code/build"
-		},
-		{
-			"name" : "Rasterizer_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
-		},
-		{
-			"name" : "Rasterizer_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "C:/code/Graphics/3/Code"
+			"value" : "C:/Environment/opencv/build/x64/mingw"
 		}
 	],
 	"kind" : "cache",
