@@ -12,9 +12,8 @@ void mouse_handler(int event, int x, int y, int flags, void *userdata)
         std::cout << "Left button of the mouse is clicked - position (" << x << ", "
         << y << ")" << '\n';
         control_points.emplace_back(x, y);
-    }     
+    }
 }
-
 void naive_bezier(const std::vector<cv::Point2f> &points, cv::Mat &window) 
 {
     auto &p_0 = points[0];
@@ -77,7 +76,46 @@ void bezier(const std::vector<cv::Point2f> &control_points, cv::Mat &window)
     
     for(t = 0; t <= 1.0; t += 0.001)
     {
-        curl_point.push_back(recursive_bezier(control_points, t));
+        auto point = recursive_bezier(control_points, t);
+        window.at<cv::Vec3b>(point.y, point.x)[1] = 255;
+
+
+
+        //anti-aliasing
+        float x = point.x - std::floor(point.x);
+        float y = point.y - std::floor(point.y);
+        int x_flag = x < 0.5f ? -1 : 1;
+        int y_flag = y < 0.5f ? -1 : 1;
+
+        // 距离采样点最近的4个坐标点
+        cv::Point2f p00 = cv::Point2f(std::floor(point.x) + 0.5f, std::floor(point.y) + 0.5f);
+        cv::Point2f p01 = cv::Point2f(std::floor(point.x) + x_flag + 0.5f, std::floor(point.y) + 0.5f);
+        cv::Point2f p10 = cv::Point2f(std::floor(point.x) + 0.5f, std::floor(point.y) + y_flag + 0.5f);
+        cv::Point2f p11 = cv::Point2f(std::floor(point.x) + x_flag + 0.5f, std::floor(point.y) + y_flag + 0.5f);
+
+        std::vector<cv::Point2f> vec;
+        vec.push_back(p01);
+        vec.push_back(p10);
+        vec.push_back(p11);
+
+        //计算最近的坐标点与采样距离
+        cv::Point2f distance = p00 - point;
+        float len = sqrt(distance.x * distance.x + distance.y * distance.y);
+
+
+        //对边缘点进行着色
+        for(auto p : vec)
+        {
+            //根据距离，计算边缘点的影响系数
+            cv::Point2f d = p - point;
+            float l = sqrt(d.x * d.x + d.y * d.y);
+            float percent = len / l;
+
+            cv::Vec3f color = window.at<cv::Vec3b>(p.y, p.x);
+            //此处简单粗暴取最大值
+            color[1] = MAX(color[1], (double)255 * percent);
+            window.at<cv::Vec3b>(p.y, p.x) = color;
+        }
     }
 
     for(int j = 0; j < control_points.size() - 1; j++)
@@ -89,6 +127,8 @@ void bezier(const std::vector<cv::Point2f> &control_points, cv::Mat &window)
     {
         window.at<cv::Vec3b>(point.y, point.x)[1] = 255;
     }
+
+
 }
 
 int main() 
@@ -99,6 +139,7 @@ int main()
 
     cv::setMouseCallback("Bezier Curve", mouse_handler, nullptr);
 
+
     int key = -1;
     while (key != 27) 
     {
@@ -107,7 +148,7 @@ int main()
             cv::circle(window, point, 3, {255, 255, 255}, 3);
         }
 
-        if (control_points.size() == POINT_NUM) 
+        if (control_points.size() == POINT_NUM)
         {
             //naive_bezier(control_points, window);
             bezier(control_points, window);

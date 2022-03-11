@@ -49,7 +49,7 @@ public:
     //双线性纹理插值
     Eigen::Vector3f getColorBilinear(float u, float v)
     {
-        if (u < 0) u = 0;
+        /*if (u < 0) u = 0;
 		if (u > 1) u = 1;
 		if (v < 0) v = 0;
 		if (v > 1) v = 1;
@@ -61,11 +61,11 @@ public:
         float x, y;
 
         //下面的代码是一堆纹
-        /*float v00[2] = {MIN(std::floor(u_img), 0), MIN(std::floor(v_img), 0)};
-        float v10[2] = {MAX(std::ceil(u_img), (float)width), MIN(std::floor(v_img), 0)};
-        float v01[2] = {MIN(std::floor(u_img), 0), MAX(std::ceil(v_img), (float)height)};
-        float v11[2] = {MAX(std::ceil(u_img), (float)width), MAX(std::ceil(v_img), (float)height)};
-        */
+        //float v00[2] = {MIN(std::floor(u_img), 0), MIN(std::floor(v_img), 0)};
+        //float v10[2] = {MAX(std::ceil(u_img), (float)width), MIN(std::floor(v_img), 0)};
+        //float v01[2] = {MIN(std::floor(u_img), 0), MAX(std::ceil(v_img), (float)height)};
+        //float v11[2] = {MAX(std::ceil(u_img), (float)width), MAX(std::ceil(v_img), (float)height)};
+        //
         float v00[2] = {MAX(std::floor(u_img), 0), MAX(std::floor(v_img), 0)};
         float v10[2] = {MIN(std::ceil(u_img), (float)width), MAX(std::floor(v_img), 0)};
         float v01[2] = {MAX(std::floor(u_img), 0), MIN(std::ceil(v_img), (float)height)};
@@ -84,6 +84,9 @@ public:
         auto colorly = lerp( h,colorlx1, colorlx2);
         
         return Eigen::Vector3f(colorly[0], colorly[1], colorly[2]); 
+        */
+
+       float x = point.x -
     }
 
 };
