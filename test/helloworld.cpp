@@ -1,33 +1,29 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
 class Solution {
 public:
-    int search(vector<int>& nums, int target) 
+    void moveZeroes(vector<int>& nums) 
     {
-        int capacity = nums.size();
-        int leftIndex = 0;
-        int rightIndex = capacity - 1;
-        int middleIndex = (leftIndex + rightIndex) / 2;
-        while(nums[middleIndex] != target)
+        vector<int> positon;
+        int n = nums.size();
+        int p1 = 0, p2 = 0, count = 0, fake = 0;
+        while(p1 <= n - 1 - count + positon.size())
         {
-            if(middleIndex <= 0 || middleIndex >= capacity - 1)
+            if(nums[p1] == 0 || nums[p1] == -1)
             {
-                return -1;
+                count++;
+                while(nums[p2] == 0 && p2 <= n - 1)
+                {
+                    p2++;
+                }
+                nums[p1] = nums[p2];
+                nums[p2] = 0;
+                fake++;
+                p2++;
             }
-            if(nums[middleIndex] > target)
-            {
-                //如果中心大于 “目标” ，说明 “目标” 在 “中心” 左边， 左移 “右边” 和 “中心”
-                rightIndex = middleIndex - 1;
-                middleIndex = (leftIndex + rightIndex) / 2;
-            }
-            else
-            {
-                //如果中心大于 “目标” ， 说明 “目标” 在 “中心” 右边， 右移 “左边” 和 “中心”
-                leftIndex = middleIndex + 1;
-                middleIndex = (leftIndex + rightIndex) / 2;
-            }
+            p1++;
         }
-        return middleIndex;
     }
 };
