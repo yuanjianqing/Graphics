@@ -85,8 +85,41 @@ public:
         
         return Eigen::Vector3f(colorly[0], colorly[1], colorly[2]); 
         */
+        if (u < 0) u = 0;
+		if (u > 1) u = 1;
+		if (v < 0) v = 0;
+		if (v > 1) v = 1;
+        auto u_img = u * width;
+        auto v_img = (1 - v) * height;
+        float x = u_img - std::floor(u_img);
+        float y = v_img - std::floor(v_img);
+        int x_flag = x < 0.5f ? -1 : 1;
+        int y_flag = y < 0.5f ? -1 : 1;
+        cv::Point2f p00 = cv::Point2f(std::floor(u_img) + 0.5f, std::floor(v_img) + 0.5f);
+        cv::Point2f p01 = cv::Point2f(std::floor(u_img) + x_flag + 0.5f, std::floor(v_img) + 0.5f);
+        cv::Point2f p10 = cv::Point2f(std::floor(u_img) + 0.5f, std::floor(v_img) + y_flag + 0.5f);
+        cv::Point2f p11 = cv::Point2f(std::floor(u_img) + x_flag + 0.5f, std::floor(v_img) + y_flag + 0.5f);
+        
+        std::vector<cv::Point2f> vec;
+        vec.push_back(p01);
+        vec.push_back(p10);
+        vec.push_back(p11);
 
-       float x = point.x -
+        cv::Point2f dis = cv::Point2f(p00.x - u_img, p00.y - v_img);
+        float len = sqrt(dis.x * dis.x + dis.y * dis.y);
+
+        auto color00 = image_data.at<cv::Vec3f>(p00.x, p00.y);
+        auto color01 = image_data.at<cv::Vec3f>(p01.x, p01.y);
+        auto color10 = image_data.at<cv::Vec3f>(p10.x, p10.y);
+        auto color11 = image_data.at<cv::Vec3f>(p11.x, p11.y);
+
+        auto colorx1 = lerp(1, color00, color10);
+        auto colorx2 = lerp(1, color01, color11);
+        auto colory = lerp(1, colorx1, colorx2);
+        
+        
+        return Eigen::Vector3f(colory[0], colory[1], colory[2]);
+       
     }
 
 };

@@ -1,33 +1,42 @@
 #include <iostream>
 #include <vector>
+
+
+#include <algorithm>
+
 using namespace std;
 class Solution {
 public:
-    int search(vector<int>& nums, int target) 
+    void rotate(vector<int>& nums, int k)
     {
-        int capacity = nums.size();
-        int leftIndex = 0;
-        int rightIndex = capacity - 1;
-        int middleIndex = (leftIndex + rightIndex) / 2;
-        while(nums[middleIndex] != target)
+        //1
+        /*
+        int n = nums.size();
+        k = k % n;
+        vector<int> ans(n);
+        for(int i = 0; i < k; i++)
         {
-            if(middleIndex <= 0 || middleIndex >= capacity - 1)
-            {
-                return -1;
-            }
-            if(nums[middleIndex] > target)
-            {
-                //如果中心大于 “目标” ，说明 “目标” 在 “中心” 左边， 左移 “右边” 和 “中心”
-                rightIndex = middleIndex - 1;
-                middleIndex = (leftIndex + rightIndex) / 2;
-            }
-            else
-            {
-                //如果中心大于 “目标” ， 说明 “目标” 在 “中心” 右边， 右移 “左边” 和 “中心”
-                leftIndex = middleIndex + 1;
-                middleIndex = (leftIndex + rightIndex) / 2;
-            }
+            ans[i] = nums[n - k + i];
         }
-        return middleIndex;
+        for(int i = k; i < n; i++)
+        {
+            ans[i] = nums[i - k];
+        }
+        swap(nums, ans);
+        */
+        
+        //2
+        
+        int n = nums.size();
+        k = k % n;
+        for(int i = 0; i < k; i++)
+        {
+            int t = nums[n - 1];
+            for(int j = n - 1; j > 0; j--)
+            {
+                nums[j] = nums[j - 1];
+            }
+            nums[0] = t;
+        }
     }
 };
