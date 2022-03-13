@@ -121,11 +121,10 @@ std::optional<hit_payload> trace(
 // If the surface is diffuse/glossy we use the Phong illumation model to compute the color
 // at the intersection point.
 // [/comment]
-Vector3f castRay(
-        const Vector3f &orig, const Vector3f &dir, const Scene& scene,
-        int depth)
+Vector3f castRay(const Vector3f &orig, const Vector3f &dir, const Scene& scene, int depth)
 {
-    if (depth > scene.maxDepth) {
+    if (depth > scene.maxDepth) 
+    {
         return Vector3f(0.0,0.0,0.0);
     }
 
@@ -225,12 +224,26 @@ void Renderer::Render(const Scene& scene)
             // generate primary ray direction
             float x;
             float y;
+
             // TODO: Find the x and y positions of the current pixel to get the direction
             // vector that passes through it.
             // Also, don't forget to multiply both of them with the variable *scale*, and
-            // x (horizontal) variable with the *imageAspectRatio*            
+            // x (horizontal) variable with the *imageAspectRatio*     
+            ///////////////////////aaaaaaaaaaaaaaaaaaaaaaaaaa       a
+            x = i + 0.5f;
+            y = j + 0.5f;
+            x *= scale;
+            x *= imageAspectRatio;
+            y *= scale;
+            ////////////////////////aaaaaaaaaaaaaaaaaaaaaaaaaa
 
             Vector3f dir = Vector3f(x, y, -1); // Don't forget to normalize this direction!
+
+            /////////////////////////////aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            dir = dir / sqrt(dir.x * dir.x + dir.y * dir.y + dir.z * dir.z);
+            /////////////////////////////aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+
             framebuffer[m++] = castRay(eye_pos, dir, scene, 0);
         }
         UpdateProgress(j / (float)scene.height);

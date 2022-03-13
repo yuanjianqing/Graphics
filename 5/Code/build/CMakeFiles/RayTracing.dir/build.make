@@ -69,7 +69,6 @@ include CMakeFiles/RayTracing.dir/progress.make
 include CMakeFiles/RayTracing.dir/flags.make
 
 CMakeFiles/RayTracing.dir/main.cpp.obj: CMakeFiles/RayTracing.dir/flags.make
-CMakeFiles/RayTracing.dir/main.cpp.obj: CMakeFiles/RayTracing.dir/includes_CXX.rsp
 CMakeFiles/RayTracing.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/RayTracing.dir/main.cpp.obj: CMakeFiles/RayTracing.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\code\Graphics\5\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RayTracing.dir/main.cpp.obj"
@@ -84,7 +83,6 @@ CMakeFiles/RayTracing.dir/main.cpp.s: cmake_force
 	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\code\Graphics\5\Code\main.cpp -o CMakeFiles\RayTracing.dir\main.cpp.s
 
 CMakeFiles/RayTracing.dir/Scene.cpp.obj: CMakeFiles/RayTracing.dir/flags.make
-CMakeFiles/RayTracing.dir/Scene.cpp.obj: CMakeFiles/RayTracing.dir/includes_CXX.rsp
 CMakeFiles/RayTracing.dir/Scene.cpp.obj: ../Scene.cpp
 CMakeFiles/RayTracing.dir/Scene.cpp.obj: CMakeFiles/RayTracing.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\code\Graphics\5\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/RayTracing.dir/Scene.cpp.obj"
@@ -99,7 +97,6 @@ CMakeFiles/RayTracing.dir/Scene.cpp.s: cmake_force
 	C:\Environment\mingw64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\code\Graphics\5\Code\Scene.cpp -o CMakeFiles\RayTracing.dir\Scene.cpp.s
 
 CMakeFiles/RayTracing.dir/Renderer.cpp.obj: CMakeFiles/RayTracing.dir/flags.make
-CMakeFiles/RayTracing.dir/Renderer.cpp.obj: CMakeFiles/RayTracing.dir/includes_CXX.rsp
 CMakeFiles/RayTracing.dir/Renderer.cpp.obj: ../Renderer.cpp
 CMakeFiles/RayTracing.dir/Renderer.cpp.obj: CMakeFiles/RayTracing.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\code\Graphics\5\Code\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RayTracing.dir/Renderer.cpp.obj"

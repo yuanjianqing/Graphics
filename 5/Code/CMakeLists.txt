@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 project(RayTracing)
 
-include_directories("C:\\Program Files (x86)\\Eigen3\\include")
 set(CMAKE_CXX_STANDARD 17)
 
 

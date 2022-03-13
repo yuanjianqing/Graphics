@@ -1,17 +1,17 @@
 [
 {
   "directory": "C:/code/Graphics/5/Code/build",
-  "command": "C:\\Environment\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/RayTracing.dir/includes_CXX.rsp -O3 -DNDEBUG -Wall -Wextra -pedantic -Wshadow -Wreturn-type -std=gnu++17 -o CMakeFiles\\RayTracing.dir\\main.cpp.obj -c C:\\code\\Graphics\\5\\Code\\main.cpp",
+  "command": "C:\\Environment\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe   -O3 -DNDEBUG -Wall -Wextra -pedantic -Wshadow -Wreturn-type -std=gnu++17 -o CMakeFiles\\RayTracing.dir\\main.cpp.obj -c C:\\code\\Graphics\\5\\Code\\main.cpp",
   "file": "C:/code/Graphics/5/Code/main.cpp"
 },
 {
   "directory": "C:/code/Graphics/5/Code/build",
-  "command": "C:\\Environment\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/RayTracing.dir/includes_CXX.rsp -O3 -DNDEBUG -Wall -Wextra -pedantic -Wshadow -Wreturn-type -std=gnu++17 -o CMakeFiles\\RayTracing.dir\\Scene.cpp.obj -c C:\\code\\Graphics\\5\\Code\\Scene.cpp",
+  "command": "C:\\Environment\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe   -O3 -DNDEBUG -Wall -Wextra -pedantic -Wshadow -Wreturn-type -std=gnu++17 -o CMakeFiles\\RayTracing.dir\\Scene.cpp.obj -c C:\\code\\Graphics\\5\\Code\\Scene.cpp",
   "file": "C:/code/Graphics/5/Code/Scene.cpp"
 },
 {
   "directory": "C:/code/Graphics/5/Code/build",
-  "command": "C:\\Environment\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe  @CMakeFiles/RayTracing.dir/includes_CXX.rsp -O3 -DNDEBUG -Wall -Wextra -pedantic -Wshadow -Wreturn-type -std=gnu++17 -o CMakeFiles\\RayTracing.dir\\Renderer.cpp.obj -c C:\\code\\Graphics\\5\\Code\\Renderer.cpp",
+  "command": "C:\\Environment\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe   -O3 -DNDEBUG -Wall -Wextra -pedantic -Wshadow -Wreturn-type -std=gnu++17 -o CMakeFiles\\RayTracing.dir\\Renderer.cpp.obj -c C:\\code\\Graphics\\5\\Code\\Renderer.cpp",
   "file": "C:/code/Graphics/5/Code/Renderer.cpp"
 }
 ]

@@ -4,7 +4,7 @@
 # compile CXX with C:/Environment/mingw64/bin/x86_64-w64-mingw32-g++.exe
 CXX_DEFINES = 
 
-CXX_INCLUDES = @CMakeFiles/RayTracing.dir/includes_CXX.rsp
+CXX_INCLUDES = 
 
 CXX_FLAGS = -O3 -DNDEBUG -Wall -Wextra -pedantic -Wshadow -Wreturn-type -std=gnu++17
 
