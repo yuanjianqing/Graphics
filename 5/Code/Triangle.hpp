@@ -4,11 +4,6 @@
 
 #include <cstring>
 
-float mul(Vector3f a, Vector3f b)
-{
-    return a.x * b.x + a.y * b.y + a.z * b.z;
-}
-
 bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1, const Vector3f& v2, const Vector3f& orig,
                           const Vector3f& dir, float& tnear, float& u, float& v)
 {
@@ -16,25 +11,20 @@ bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1, const Vector3f
     // that's specified bt v0, v1 and v2 intersects with the ray (whose
     // origin is *orig* and direction is *dir*)
     // Also don't forget to update tnear, u and v.
-    
-    ////////////////////////////////aaaaaaaaaaaaaaaaaaaaaaaaaaa
 
     Vector3f E1 = v1 - v0;
     Vector3f E2 = v2 - v0;
     Vector3f S = orig - v0;
-    Vector3f S1 = (dir.y * E2.z - E2.y * dir.z,
-                    dir.z * E2.x - dir.x * E2.z,
-                    dir.x * E2.y - E2.x * dir.y);
-    Vector3f S2 = (S.y * E2.z - E2.y * S.z,
-                    S.z * E2.x - S.x * E2.z,
-                    S.x * E2.y - E2.x * S.y);
+    Vector3f S1 = crossProduct(dir, E2);
 
-    float xiShu = 1 / mul(S1, E1);
-    float t = xiShu * mul(S2, E2);
-    float b1 = xiShu * mul(S1, S);
-    float b2 = xiShu * mul(S2, dir);
+    Vector3f S2 = crossProduct(S, E1);
 
-    if(b1 > 0 && b2 > 0 && 1 - b1 - b2 > 0)
+    float xiShu = dotProduct(S1, E1);
+    float t = dotProduct(S2, E2) / xiShu;
+    float b1 = dotProduct(S1, S) / xiShu;
+    float b2 = dotProduct(S2, dir) / xiShu;
+
+    if(t > 0 && b1 > 0 && b2 > 0 && 1 - b1 - b2 > -10E-6)
     {
         u = b1;
         v = b2;
@@ -42,7 +32,6 @@ bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1, const Vector3f
         return true;
     }
 
-    ////////////////////////////////aaaaaaaaaaaaaaaaaaaaaaaaaaa
     return false;
 }
 
