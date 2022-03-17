@@ -1,0 +1,3 @@
+C:/code/Graphics/6/Assignment6/build/CMakeFiles/RayTracing.dir
+C:/code/Graphics/6/Assignment6/build/CMakeFiles/edit_cache.dir
+C:/code/Graphics/6/Assignment6/build/CMakeFiles/rebuild_cache.dir
