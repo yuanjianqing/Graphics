@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d8d78bf712515488d7238a86b3d92b, type: 3}
+  m_Name: Slot 2
+  m_EditorClassIdentifier: 
+  itemToSlot: {fileID: 11400000, guid: f7ae2026de147db4c8eea5ffadc63ea1, type: 2}
+  slotHeld: 0
+  empty: 1

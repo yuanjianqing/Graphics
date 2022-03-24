@@ -13,10 +13,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Wall
+  - Item
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: "\u80CC\u666F"
+    uniqueID: 2599345209
+    locked: 0
+  - name: "\u73A9\u5BB6"
+    uniqueID: 2786301451
+    locked: 0
+  - name: "\u5730\u9762"
+    uniqueID: 1690498783
+    locked: 0
+  - name: "\u7269\u54C1"
+    uniqueID: 1562007035
     locked: 0
