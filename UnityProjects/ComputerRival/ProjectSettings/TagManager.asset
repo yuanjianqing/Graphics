@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - "\u7530"
+  - "\u79BE"
   layers:
   - Default
   - TransparentFX
