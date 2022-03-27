@@ -1,0 +1,27 @@
+[
+{
+  "directory": "C:/code/Graphics/7/Assignment7/build",
+  "command": "C:\\Environment\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe   -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\RayTracing.dir\\main.cpp.obj -c C:\\code\\Graphics\\7\\Assignment7\\main.cpp",
+  "file": "C:/code/Graphics/7/Assignment7/main.cpp"
+},
+{
+  "directory": "C:/code/Graphics/7/Assignment7/build",
+  "command": "C:\\Environment\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe   -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\RayTracing.dir\\Vector.cpp.obj -c C:\\code\\Graphics\\7\\Assignment7\\Vector.cpp",
+  "file": "C:/code/Graphics/7/Assignment7/Vector.cpp"
+},
+{
+  "directory": "C:/code/Graphics/7/Assignment7/build",
+  "command": "C:\\Environment\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe   -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\RayTracing.dir\\Scene.cpp.obj -c C:\\code\\Graphics\\7\\Assignment7\\Scene.cpp",
+  "file": "C:/code/Graphics/7/Assignment7/Scene.cpp"
+},
+{
+  "directory": "C:/code/Graphics/7/Assignment7/build",
+  "command": "C:\\Environment\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe   -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\RayTracing.dir\\BVH.cpp.obj -c C:\\code\\Graphics\\7\\Assignment7\\BVH.cpp",
+  "file": "C:/code/Graphics/7/Assignment7/BVH.cpp"
+},
+{
+  "directory": "C:/code/Graphics/7/Assignment7/build",
+  "command": "C:\\Environment\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe   -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles\\RayTracing.dir\\Renderer.cpp.obj -c C:\\code\\Graphics\\7\\Assignment7\\Renderer.cpp",
+  "file": "C:/code/Graphics/7/Assignment7/Renderer.cpp"
+}
+]
