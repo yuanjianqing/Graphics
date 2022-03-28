@@ -12,7 +12,7 @@
 class Bounds3
 {
   public:
-    Vector3f pMin, pMax; // two points to specify the bounding box
+    Vector3f pMin, pMax; // two points t_Exist specify the bounding box
     Bounds3()
     {
         double minNum = std::numeric_limits<double>::lowest();
@@ -93,10 +93,6 @@ class Bounds3
 inline bool Bounds3::IntersectP(const Ray& ray, const Vector3f& invDir,
                                 const std::array<int, 3>& dirIsNeg) const
 {
-    // invDir: ray direction(x,y,z), invDir=(1.0/x,1.0/y,1.0/z), use this because Multiply is faster that Division
-    // dirIsNeg: ray direction(x,y,z), dirIsNeg=[int(x>0),int(y>0),int(z>0)], use this to simplify your logic
-    // TODO test if ray bound intersects
-
     //保存pMin，pMax
     auto pMi = pMin;
     auto pMa = pMax;
@@ -114,20 +110,12 @@ inline bool Bounds3::IntersectP(const Ray& ray, const Vector3f& invDir,
         std::swap(pMi.z, pMa.z);
     }
 
-
-
     auto txyz = (pMi - ray.origin) * invDir;
-    float ti = std::max( std::max( txyz.x, txyz.y ), txyz.z);
+    float t_Enter = std::max( std::max( txyz.x, txyz.y ), txyz.z);
     txyz = (pMa - ray.origin) * invDir;
-    float to = std::min( std::min( txyz.x, txyz.y ), txyz.z);
+    float t_Exit = std::min( std::min( txyz.x, txyz.y ), txyz.z);
     
-    if(to > ti && ti > ray.t_min) 
-    {
-        return true;
-    }
-    else 
-        return false;
-
+    return t_Exit >= t_Enter && t_Exit > 0;
 }
 
 inline Bounds3 Union(const Bounds3& b1, const Bounds3& b2)

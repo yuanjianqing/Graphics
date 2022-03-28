@@ -256,12 +256,12 @@ inline Intersection Triangle::getIntersection(Ray ray)
     if(t_tmp < 0)
         return inter;
     
-    inter.happened = true;
-    inter.coords = ray(t_tmp);
-    inter.normal = normal;
     inter.distance = t_tmp;
-    inter.obj = this;
-    inter.m = m;
+	inter.coords = ray(t_tmp);
+	inter.happened = true;
+	inter.m = m;
+	inter.normal = normal;
+	inter.obj = this;
 
     return inter;
 }

@@ -63,43 +63,45 @@ Vector3f Scene::castRay(const Ray &ray, int depth) const
     // TO DO Implement Path Tracing Algorithm here
 
 
-    auto intersection = intersect(ray);
-    if(!intersection.happened)
-        return {};
-    if(intersection.m->hasEmission())
-        return intersection.m->getEmission();
-
     Vector3f L_dir = { 0,0,0 };
-    Vector3f L_indir = { 0,0,0 };
-
-    Intersection LightInter;
-    float lightPdf;
-    sampleLight(LightInter, lightPdf);
-
-    Vector3f object2Light = LightInter.coords - intersection.coords;
-    float disSq = object2Light.squrenorm();
-    Vector3f light2ObjectDir = object2Light.normalized();
-    Ray light2ObjectRay(intersection.coords, light2ObjectDir);
-
-    Intersection light2Object_point = intersect(light2ObjectRay);
-
-    //通过距离判断light是否打到物体上有没有遮挡
-
-    if(light2Object_point.distance - object2Light.norm() > -EPSILON)
-        L_dir = LightInter.emit * intersection.m->eval(ray.direction, object2Light, intersection.normal) * dotProduct(intersection.normal, object2Light) * dotProduct(-object2Light, LightInter.normal) / disSq / lightPdf;
-
-    if(get_random_float() > RussianRoulette)
-        return L_dir;
-    
-    Vector3f wo = intersection.m->sample(ray.direction, intersection.normal).normalized();
-    Ray nextObjectRay(intersection.coords, wo);
-    Intersection nextInter = intersect(nextObjectRay);
-
-    if(nextInter.happened && !nextInter.m->hasEmission())
-    {
-        float pdf = intersection.m->pdf(ray.direction, wo, intersection.normal);
-        L_indir = castRay(nextObjectRay, depth + 1) * intersection.m->eval(ray.direction, wo, intersection.normal) * dotProduct(wo, intersection.normal) / pdf / RussianRoulette;
-    }
-
-    return L_dir + L_indir;
+     Vector3f L_indir = { 0,0,0 };
+ 
+     Intersection intersection = Scene::intersect(ray);
+     if (!intersection.happened)
+     {
+         return {};
+     }
+     //打到光源
+     if (intersection.m->hasEmission())
+     return intersection.m->getEmission();
+ 
+     //打到物体后对光源均匀采样
+     Intersection lightpos;
+     float lightpdf = 0.0f;
+     sampleLight(lightpos, lightpdf);//获得对光源的采样，包括光源的位置和采样的pdf
+ 
+     Vector3f collisionlight = lightpos.coords - intersection.coords;
+     float dis = collisionlight.squrenorm();
+     Vector3f collisionlightdir = collisionlight.normalized();
+     Ray objray(intersection.coords, collisionlightdir);
+ 
+     Intersection ishaveobj = Scene::intersect(objray);
+     //L_dir = L_i * f_r * cos_theta * cos_theta_x / |x - p | ^ 2 / pdf_light
+     if (ishaveobj.distance - collisionlight.norm() > -EPSILON)//说明之间没有遮挡
+     L_dir = lightpos.emit * intersection.m->eval(ray.direction, collisionlightdir, intersection.normal) * dotProduct(collisionlightdir, intersection.normal) * dotProduct(-collisionlightdir, lightpos.normal) / dis / lightpdf;
+ 	 //打到物体后对半圆随机采样使用RR算法
+     if (get_random_float() > RussianRoulette)
+     return L_dir;
+ 
+     Vector3f w0 = intersection.m->sample(ray.direction, intersection.normal).normalized();
+     Ray objrayobj(intersection.coords, w0);
+     Intersection islight = Scene::intersect(objrayobj);
+     // shade(q, wi) * f_r * cos_theta / pdf_hemi / P_RR
+     if (islight.happened && !islight.m->hasEmission())
+     {
+         float pdf = intersection.m->pdf(ray.direction, w0, intersection.normal);
+         L_indir = castRay(objrayobj, depth + 1) * intersection.m->eval(ray.direction, w0, intersection.normal) * dotProduct(w0, intersection.normal) / pdf / RussianRoulette;
+     }
+ 
+     return L_dir + L_indir;
 }
